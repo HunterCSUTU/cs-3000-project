@@ -13,7 +13,7 @@ def create_arr():
     arr = opensimplex.noise2array(ix, iy)
     return arr
 
-if __name__ == '__main__':
+if __name__ == '__main__':   #You have to write this or your PC will freak out.
     #if you use too many cores in your cluser on a potato pc, then your cluster wont work write. Like terminating workers and needing to run the tasks on a different worker.
     #dask is assigning 2 cores to an object. Like the raspberry pi's all zip tied up working together, it is called a cluster.
     cluster = dask.distributed.LocalCluster(n_workers=10, threads_per_worker=1)
